@@ -1,4 +1,5 @@
 var price= document.querySelector("#price_text");
+var reset_id = document.querySelector("#reset_id");
 var currency = ["USD", "GBP" ,"EUR"];
 var data = [];
 var XHR = new XMLHttpRequest();
@@ -14,3 +15,7 @@ XHR.send();
 function getRate(id) {
 price.innerHTML = data[id];
 }
+reset_id.addEventListener("click",function()
+{
+	price.innerHTML="";
+});
